@@ -45,7 +45,10 @@ public class SimpleHashSetTest {
         t.add("India");
         t.add("Africa");
         t.add("America");
-        assertTrue(t.retainAll(Arrays.asList("India","America")));
+        t.retainAll(Arrays.asList("India","America"));
+        assertTrue(t.contains("India"));
+        assertTrue(t.contains("America"));
+        assertFalse(t.contains("Africa"));
     }
     
 }
